@@ -33,8 +33,7 @@
                     <th>File</th>
                     <td>
                         @if ($suratKeluar->file)
-                            <a href="{{ route('surat-keluar.download', $suratKeluar->id) }}" 
-                               class="btn btn-success btn-sm">
+                        <a href="{{ route('surat-keluar.download', $suratKeluar->id) }}" class="btn btn-success btn-sm">
                                <i class="fa fa-download"></i> Download File
                             </a>
                         @else

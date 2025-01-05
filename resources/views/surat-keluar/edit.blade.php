@@ -8,27 +8,42 @@
 
     <div class="form-group">
         <label for="no_surat">No Surat:</label>
-        <input type="text" name="no_surat" value="{{ $suratKeluar->no_surat }}" required>
+        <input type="text" name="no_surat" value="{{ old('no_surat', $suratKeluar->no_surat) }}" required>
+        @error('no_surat')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
     </div>
 
     <div class="form-group">
         <label for="tanggal_surat">Tanggal Surat:</label>
-        <input type="date" name="tanggal_surat" value="{{ $suratKeluar->tanggal_surat }}" required>
+        <input type="date" name="tanggal_surat" value="{{ old('tanggal_surat', $suratKeluar->tanggal_surat) }}" required>
+        @error('tanggal_surat')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
     </div>
 
     <div class="form-group">
         <label for="tanggal_terima">Tanggal Terima:</label>
-        <input type="date" name="tanggal_terima" value="{{ $suratKeluar->tanggal_terima }}" required>
+        <input type="date" name="tanggal_terima" value="{{ old('tanggal_terima', $suratKeluar->tanggal_terima) }}" required>
+        @error('tanggal_terima')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
     </div>
 
     <div class="form-group">
         <label for="tujuan">Tujuan:</label>
-        <input type="text" name="tujuan" value="{{ $suratKeluar->tujuan }}" required>
+        <input type="text" name="tujuan" value="{{ old('tujuan', $suratKeluar->tujuan) }}" required>
+        @error('tujuan')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
     </div>
 
     <div class="form-group">
         <label for="perihal">Perihal:</label>
-        <input type="text" name="perihal" value="{{ $suratKeluar->perihal }}" required>
+        <input type="text" name="perihal" value="{{ old('perihal', $suratKeluar->perihal) }}" required>
+        @error('perihal')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
     </div>
 
     <div class="form-group">
@@ -37,6 +52,9 @@
         @if($suratKeluar->file)
             <p class="current-file">File saat ini: {{ basename($suratKeluar->file) }}</p>
         @endif
+        @error('file')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
     </div>
 
     <div class="button-container">

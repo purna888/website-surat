@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/surat-keluar/{id}/edit', [SuratKeluarController::class, 'edit'])->name('surat-keluar.edit'); // Form edit surat keluar
     Route::patch('/surat-keluar/{id}', [SuratKeluarController::class, 'update'])->name('surat-keluar.update'); // Update surat keluar
     Route::delete('/surat-keluar/{id}', [SuratKeluarController::class, 'destroy'])->name('surat-keluar.destroy'); // Hapus surat keluar
-    Route::get('/surat-keluar/{id}/download', [SuratKeluarController::class, 'download'])->name('surat-keluar.download'); // Download file surat keluar
+    Route::get('/surat-keluar/download/{suratKeluar}', [SuratKeluarController::class, 'download'])->name('surat-keluar.download');
 
 });
 
