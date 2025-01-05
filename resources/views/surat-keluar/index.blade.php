@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Surat Keluar')
+@section('title', 'Surat_Keluar')
 
 @section('content')
 <h1>Daftar Surat Keluar</h1>
